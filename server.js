@@ -29,14 +29,17 @@ if (process.env.NODE_ENV === "development") {
 }
 
 
+app.get("/test",(req,res)=>{
+res.json("hellow abdo your app is running successfully")
 
+})
 
 //mount  Routes
 app.use("/api/v1/movies",movieroute)
 app.use("/api/v1/category",categoryroute)
 
 
-app.use("/",console.log("welcome gentl"))
+
   
 
 app.all('*',(req,res,next)=>{

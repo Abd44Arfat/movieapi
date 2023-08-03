@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === "development") {
 
 
 //mount  Routes
-app.use("/api/v1/Movies",movieroute)
+app.use("/api/v1/movies",movieroute)
 app.use("/api/v1/category",categoryroute)
 
 

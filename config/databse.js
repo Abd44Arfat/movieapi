@@ -1,9 +1,11 @@
 
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
+dotenv.config({path:'.env'})
 const dbConnection=()=>{
   mongoose 
-  .connect('mongodb://127.0.0.1/moviesDb') 
+  .connect(process.env.Mongo_URI) 
   .then((conn) => {
     console.log(`Datase connected:${conn.connection.host}`);
   })

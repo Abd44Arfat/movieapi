@@ -36,7 +36,7 @@ app.use("/api/v1/movies",movieroute)
 app.use("/api/v1/category",categoryroute)
 
 
-
+app.use("/",console.log("welcome gentl"))
   
 
 app.all('*',(req,res,next)=>{
